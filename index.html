@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my projetc</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="color">
+    <select onchange="mudarCorFundo()"  id="sele">
+         <option selected disabled >cor de fundo</option> 
+        <option  value="red">vermelho</option>    
+        <option value="blue">azul</option>    
+        <option value="yellow">amarelo</option>    
+        <option value="green">verde</option>    
+    </select>
+</div>
+        <h1 id="h1">Bom Dia</h1>
+            
+    </div>
+
+    <header>
+
+        
+        <div class="item active ">DEUS A FRENTE DE TUDO! </div>
+
+        <div class="item  ">O amanhã será melhor que hoje!
+        
+        </div>
+
+        <div class="item">Nunca desista dos seus sonhos !</div>
+
+    </header>
+    <main class="conteiner">
+
+        <div class="cambio">
+            <label for="campoConversao"  >Digite um valor em real</label>
+           
+            
+            <input onfocus="apagar()" id="campoConversao" type="number" placeholder="Ex:100">
+            
+            <button onclick="converter()" id="conv">converter</button>
+
+            <select style="color: rgb(243, 243, 243) ; background-color: black;" id="op" >
+                <option disabled selected>Escolha uma moeda</option>
+
+                <option value="dolar">Real pra Dolar</option>
+
+                <option value="euro">Real pra Euro</option>
+            </select>
+
+            <div style="background-color: grey;" id="cp" class="campoResp">
+                <p style="   font-size: 1.5rem; font-weight: bold;"   id="resp"></p>
+            </div>
+
+        </div>
+
+
+<div class="calculator">
+        <section class="grid grid-template-areas">
+
+            <input id="inputDisplay"  class="display">
+
+            <button ondblclick="ac()" onclick="apagarUm()" class="it clear button-operations">AC</button>
+            <button onclick="invertValue()" class="it plus-minus button-operations">+/-</button>
+            <button onclick="percentage()" class="it percent button-operations">%</button>
+            <button onclick="inserValues('/')" class="it buttonision button-operations-right">/</button>
+
+            <button onclick="inserValues('7')" class="it seven button-numbers">7</button>
+            <button onclick=" inserValues('8') "class="it eight button-numbers">8</button>
+            <button onclick=" inserValues('9') " class="it nine button-numbers">9</button>
+            <button onclick=" inserValues('*') " class="it multiplication button-operations-right">x</button>
+
+            <button onclick="inserValues('4')" class="it four button-numbers">4</button>
+            <button onclick="inserValues('5')" class="it five button-numbers">5</button>
+            <button onclick="inserValues('6')" class="it six button-numbers">6</button>
+            <button onclick="inserValues('-')" class="it minus button-operations-right">-</button>
+
+            <button onclick="inserValues('1')" class="it one button-numbers">1</button>
+            <button onclick="inserValues('2')" class="it two button-numbers">2</button>
+            <button onclick="inserValues('3')" class="it three button-numbers">3</button>
+
+            <button onclick="inserValues('+')" class="it plus button-operations-right">+</button>
+            <button onclick="inserValues('0')" class="it zeero button-numbers">0</button>
+            <button onclick="inserValues(',')" class="it point button-numbers">,</button>
+            <button style="border-bottom-right-radius:10px ;" onclick="calculate()" class="it equal button-operations-right">=</button>
+        </section>
+
+
+
+
+
+</div>
+
+
+        <div class="bloco">
+            <p style="font-weight: bold; font-size: 1.5rem; color: white;" >faça uma anotação</p>
+            <input id="campoAnotacao" type="text" placeholder="digite sua tarefa">
+            <button onclick="addConta()" id="salvar" >enviar</button>
+
+            <div id="anotcao" class="espAnotacao">
+               
+
+
+            </div>
+
+        </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+    <script src="/projetc.js" ></script>
+</body>
+
+</html>
